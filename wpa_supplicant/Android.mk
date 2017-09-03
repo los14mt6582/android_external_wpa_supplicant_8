@@ -273,6 +273,10 @@ L_CFLAGS += -DCONFIG_NO_VLAN
 OBJS += ibss_rsn.c
 endif
 
+ifeq ($(NVRAM_WARNING),true)
+L_CFLAGS += -DNVRAM_WARNING
+endif
+
 ifdef CONFIG_P2P
 OBJS += p2p_supplicant.c
 OBJS += p2p_supplicant_sd.c
